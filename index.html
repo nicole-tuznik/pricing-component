@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Pricing Component</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Our Pricing</h1>
+      <div class="header__toggle">
+        <p class="header__toggle-txt">Annually</p>
+
+        <input type="checkbox" class="toggle-checkbox" id="toggle" />
+        <label for="toggle" aria-label="pricing toggle switch" class="toggle">
+        </label>
+
+        <p class="header__toggle-txt">Monthly</p>
+      </div>
+    </header>
+
+    <div class="cards">
+      <div class="card white-card">
+        <h5 class="card__title">Basic</h5>
+        <p class="card__price card__price-monthly">
+          <span>&dollar;</span>19.99
+        </p>
+        <p class="card__price card__price-annually">
+          <span>&dollar;</span>199.99
+        </p>
+        <ul class="card__details">
+          <li class="card__detail">500 GB Storage</li>
+          <li class="card__detail">2 Users Allowed</li>
+          <li class="card__detail">Send up to 3 GB</li>
+        </ul>
+        <button class="card__btn purple-btn">Learn More</button>
+      </div>
+      <div class="card purple-card">
+        <h5 class="card__title">Professional</h5>
+        <p class="card__price card__price-monthly">
+          <span>&dollar;</span>24.99
+        </p>
+        <p class="card__price card__price-annually">
+          <span>&dollar;</span>249.99
+        </p>
+        <ul class="card__details">
+          <li class="card__detail">1 TB Storage</li>
+          <li class="card__detail">5 Users Allowed</li>
+          <li class="card__detail">Send up to 10 GB</li>
+        </ul>
+        <button class="card__btn white-btn">Learn More</button>
+      </div>
+      <div class="card white-card">
+        <h5 class="card__title">Master</h5>
+        <p class="card__price card__price-monthly">
+          <span>&dollar;</span>39.99
+        </p>
+        <p class="card__price card__price-annually">
+          <span>&dollar;</span>399.99
+        </p>
+        <ul class="card__details">
+          <li class="card__detail">2 TB Storage</li>
+          <li class="card__detail">10 Users Allowed</li>
+          <li class="card__detail">Send up to 20 GB</li>
+        </ul>
+        <button class="card__btn purple-btn">Learn More</button>
+      </div>
+    </div>
+  </body>
+</html>

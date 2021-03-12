@@ -1,0 +1,159 @@
+$v-lt-grey-blue: hsl(240, 78%, 98%);
+$lt-grey-blue: hsl(234, 14%, 74%);
+$grey: hsl(233, 13%, 49%);
+$dk-grey-blue: hsl(232, 13%, 33%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $grey;
+  text-align: center;
+  background: url(/images/bg-top.svg) $v-lt-grey-blue top left 250px / auto
+    no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.card__price-monthly {
+  display: none;
+}
+
+.header {
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  margin: 0 1rem;
+
+  &-checkbox {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 11%;
+    left: 5%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #fff;
+  }
+}
+
+.toggle-checkbox:checked + .toggle::after {
+  left: 55%;
+}
+
+.cards {
+  width: 90%;
+}
+
+.card {
+  background: #fff;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 15px;
+
+  &__title {
+    font-size: 1.2rem;
+  }
+
+  &__price {
+    font-size: 4rem;
+    color: $dk-grey-blue;
+    padding: 1rem 0;
+
+    span {
+      font-size: 2.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  &__detail {
+    list-style: none;
+    padding: 1.3rem;
+    border-bottom: 1px solid $lt-grey-blue;
+
+    &:first-child {
+      border-top: 1px solid $lt-grey-blue;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin: 2.5rem 0 1.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 1px;
+    background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: #fff;
+  }
+}
+
+.purple-card {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+
+  .card__price {
+    color: inherit;
+  }
+}
+
+.white-btn {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+@media (min-width: 750px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    // width: 100%;
+  }
+
+  .card {
+  }
+
+  .white-card {
+    margin: 2rem 0;
+  }
+
+  .purple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
