@@ -26,37 +26,41 @@ body {
   align-items: center;
   margin: 2rem 0; }
 
-.toggle {
+#toggle {
   position: relative;
-  display: inline-block;
+  -webkit-appearance: none;
   width: 4rem;
   height: 2rem;
   border-radius: 15px;
+  outline: none;
   background: linear-gradient(#a3a8f0, #696fdd);
-  margin: 0 1rem; }
-  .toggle-checkbox {
-    display: none; }
-  .toggle::after {
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in-out; }
+  #toggle:hover {
+    opacity: 60%; }
+  #toggle:checked::after {
+    left: 57%; }
+  #toggle::after {
     content: "";
     position: absolute;
     border-radius: 50%;
-    top: 11%;
+    top: 13%;
     left: 5%;
     height: 1.5rem;
     width: 1.5rem;
     background: #fff; }
-
-.toggle-checkbox:checked + .toggle::after {
-  left: 55%; }
 
 .cards {
   width: 90%; }
 
 .card {
   background: #fff;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   padding: 1.5rem;
-  border-radius: 15px; }
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px 0px #6d708d;
+  max-width: 400px; }
   .card__title {
     font-size: 1.2rem; }
   .card__price {
@@ -82,8 +86,15 @@ body {
     font-family: inherit;
     font-size: inherit;
     letter-spacing: 1px;
+    border: 1px solid transparent;
     background: linear-gradient(to right, #a3a8f0, #696fdd);
-    color: #fff; }
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out; }
+    .card__btn:hover {
+      background: transparent;
+      color: #696fdd;
+      border: 1px solid #696fdd; }
 
 .purple-card {
   background: linear-gradient(#a3a8f0, #696fdd);
@@ -94,12 +105,26 @@ body {
 .white-btn {
   background: #fff;
   color: #696fdd; }
+  .white-btn:hover {
+    color: #fff;
+    border: 1px solid #fff; }
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
+  body {
+    height: 100vh;
+    background-color: #f6f6fe;
+    background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left; }
+  .header__title {
+    font-size: 2.5rem; }
   .cards {
     display: flex;
     justify-content: center;
     align-items: normal; }
+  .card {
+    width: 30%;
+    margin: 0; }
   .white-card {
     margin: 2rem 0; }
   .purple-card {
