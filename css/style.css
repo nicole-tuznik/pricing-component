@@ -109,6 +109,10 @@ body {
     color: #fff;
     border: 1px solid #fff; }
 
+@media (min-width: 620px) {
+  body {
+    background: url(/images/bg-top.svg) #f6f6fe top right/auto no-repeat; } }
+
 @media (min-width: 1000px) {
   body {
     height: 100vh;
